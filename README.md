@@ -15,13 +15,31 @@ This will create a container that has Python3.6, CUDA 10.0 and Tensorflow 1.14.
 ### Steps for running the bash script
 The following commands will clone the repository and setup everything required for training the model:
 
-1) apt install git
-2) git clone https://github.com/linguist89/thesis_2021_craft.git
-3) cd thesis_2021_craft
-4) chmod u+x ./docker_setup.sh
-5) ./docker_setup.sh bert_base
-6) unzip data_files_11split_manual_wparts.zip
-7) unzip edited_it_11split_manual_wparts.zip
+3) apt install git
+4) git clone https://github.com/linguist89/thesis_2021_craft.git
+5) cd thesis_2021_craft
+6) chmod u+x ./docker_setup.sh
+7) ./docker_setup.sh bert_base
+8) unzip data_files_11split_manual_wparts.zip
+9) unzip edited_it_11split_manual_wparts.zip
 
 For the above step, you can choose spanbert_base or bert_base depending on which model you want to train. The default is bert_base.
 
+### Setup environment variables
+For step two you can choose either bert_base or spanbert_base
+10) export data_dir="."
+11) export CHOSEN_MODEL="bert_base"
+12) export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+13) export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+### Train the model
+For step 14 you can change the file directory to 21split or 51 split depending on which segmentation files you want to train 
+For step 15 you can change it to train_spanbert_base if you setup for the spanbert model
+14) training_file_change.sh data_files_11split_manual_wparts
+15) GPU=0 python train.py train_bert_base
+
+### Evalute results on the masked datasets
+For step 16 you can change the file directory to 21split or 51 split depending on which segmentation files you want to evaluate on
+For step 17 you can change it to train_spanbert_base if you setup for the spanbert model
+16) evaluating_file_change.sh edited_it_11split_manual_wparts
+17) GPU=0 evaluate train.py train_bert_base
