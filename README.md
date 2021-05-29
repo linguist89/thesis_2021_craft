@@ -19,6 +19,9 @@ The following commands will clone the repository and setup everything required f
 2) git clone https://github.com/linguist89/thesis_2021_craft.git
 3) cd thesis_2021_craft
 4) chmod u+x ./docker_setup.sh
-
-For the following step, you can choose spanbert_base or bert_base depending on which model you want to train. The default is bert_base.
 5) ./docker_setup.sh bert_base
+6) unzip data_files_11split_manual_wparts.zip
+7) unzip edited_it_11split_manual_wparts.zip
+
+For the above step, you can choose spanbert_base or bert_base depending on which model you want to train. The default is bert_base.
+
