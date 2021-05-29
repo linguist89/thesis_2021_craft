@@ -13,7 +13,12 @@ Run the following commands from the terminal:
 This will create a container that has Python3.6, CUDA 10.0 and Tensorflow 1.14.
 
 ### Steps for running the bash script
-The following three commands will clone the repository and setup everything required for training the model:
+The following commands will clone the repository and setup everything required for training the model:
 
 1) apt install git
 2) git clone https://github.com/linguist89/thesis_2021_craft.git
+3) cd thesis_2021_craft
+4) chmod u+x ./docker_setup.sh
+
+For the following step, you can choose spanbert_base or bert_base depending on which model you want to train. The default is bert_base.
+5) ./docker_setup.sh bert_base

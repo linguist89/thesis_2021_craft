@@ -19,6 +19,6 @@ update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 pip install -r requirements.txt --log install-log.txt -q
 ./setup_all.sh
 ./download_pretrained.sh $CHOSEN_MODEL
-rm setup_trainig.sh
+rm ./coref/setup_trainig.sh
 wget https://github.com/linguist89/thesis_2021_craft/raw/main/setup_training.sh
 ./setup_training.sh . .
