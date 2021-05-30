@@ -27,6 +27,7 @@ For the above step, you can choose spanbert_base or bert_base depending on which
 
 ### Setup environment variables
 For step two you can choose either bert_base or spanbert_base
+
 10) export data_dir="."
 11) export CHOSEN_MODEL="bert_base"
 12) export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
@@ -35,6 +36,7 @@ For step two you can choose either bert_base or spanbert_base
 ### Train the model
 For step 15 you can change the file directory to 21split or 51 split depending on which segmentation files you want to train 
 For step 16 you can change it to train_spanbert_base if you setup for the spanbert model
+
 14) cd coref
 15) ../training_file_change.sh data_files_11split_manual_wparts
 16) GPU=0 python train.py train_bert_base
@@ -42,5 +44,6 @@ For step 16 you can change it to train_spanbert_base if you setup for the spanbe
 ### Evalute results on the masked datasets
 For step 17 you can change the file directory to 21split or 51 split depending on which segmentation files you want to evaluate on
 For step 18 you can change it to train_spanbert_base if you setup for the spanbert model
+
 17) ../evaluating_file_change.sh edited_it_11split_manual_wparts
 18) GPU=0 evaluate train.py train_bert_base
