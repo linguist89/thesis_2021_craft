@@ -42,7 +42,7 @@ For step 16 you can change it to train_spanbert_base if you setup for the spanbe
 16) GPU=0 python train.py train_bert_base
 
 ### Evalute results on the masked datasets
-For step 17 you can change the file directory to 21split or 51 split depending on which segmentation files you want to evaluate on
+For step 17 you can change the file directory to 21 split or 51 split depending on which segmentation files you want to evaluate on
 For step 18 you can change it to train_spanbert_base if you setup for the spanbert model
 
 17) ../evaluating_file_change.sh edited_it_11split_manual_wparts
