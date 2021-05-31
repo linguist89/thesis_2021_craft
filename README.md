@@ -34,7 +34,7 @@ For step two you can choose either bert_base or spanbert_base
 13) export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 ### Train the model
-For step 15 you can change the file directory to 21split or 51 split depending on which segmentation files you want to train 
+For step 15 you can change the file directory to 21 split or 51 split depending on which segmentation files you want to train 
 For step 16 you can change it to train_spanbert_base if you setup for the spanbert model
 
 14) cd coref
